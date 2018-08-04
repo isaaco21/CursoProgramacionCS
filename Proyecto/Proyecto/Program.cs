@@ -86,7 +86,7 @@ class AddressPrompt
                 }
                 break;
             case "E":
-                Console.WriteLine("Enter Name to Edit: ");
+                Console.WriteLine("Entre nombre a editar: ");
                 name = Console.ReadLine();
                 Address addr = book.find(name);
                 if (addr == null)
@@ -95,9 +95,11 @@ class AddressPrompt
                 }
                 else
                 {
-                    Console.WriteLine("Entre la nueva informacion:");
+                    Console.Write("Entre el nuevo telefono: ");
                     Console.Write("");
                     addr.address = Console.ReadLine();
+                    Console.Write("Entre el nuevo mail: ");
+                    addr.mail = Console.ReadLine();
                     Console.WriteLine("se acaba de actualizar a {0}", name);
                 }
                 break;
