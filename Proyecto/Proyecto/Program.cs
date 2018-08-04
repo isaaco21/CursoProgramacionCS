@@ -15,7 +15,7 @@ class AddressPrompt
         AddressPrompt prompt = new AddressPrompt();
 
         prompt.displayMenu();
-        while (!selection.ToUpper().Equals("Q"))
+        while (!selection.ToUpper().Equals("C"))
         {
             Console.WriteLine("Selection: ");
             selection = Console.ReadLine();
@@ -25,13 +25,13 @@ class AddressPrompt
 
     void displayMenu()
     {
-        Console.WriteLine("Main Menu");
+        Console.WriteLine("Menu Principal");
         Console.WriteLine("=========");
-        Console.WriteLine("A - Add an Address");
-        Console.WriteLine("D - Delete an Address");
-        Console.WriteLine("E - Edit an Address");
-        Console.WriteLine("L - List All Addresses");
-        Console.WriteLine("Q - Quit");
+        Console.WriteLine("A - Añadir persona");
+        Console.WriteLine("B - Borrar persona");
+        Console.WriteLine("E - Editar persona");
+        Console.WriteLine("L - Listar personas");
+        Console.WriteLine("C - Cerrar");
     }
 
     void performAction(string selection)
@@ -58,7 +58,7 @@ class AddressPrompt
                     Console.WriteLine("ya existe un registro para {0}.", name);
                 }
                 break;
-            case "D":
+            case "B":
                 Console.WriteLine("Entre un nombre a borrar: ");
                 name = Console.ReadLine();
                 if (book.remove(name))
